@@ -1,0 +1,11 @@
+parameters:
+  {{ options.vendorPrefix }}.param_name: param_value
+
+services:
+  {{ options.vendorPrefix }}.service_name: 'service_class'
+
+  {%  if options.hasTwigComponents %}
+  {{ options.bundleNamespace }}\Twig\FooterCopyrightComponent:
+    tags:
+      - {name: 'twig.component', key: '{{ bundleName }}Hello', template: '__DIR__/components/footerCopyright.html.twig'}
+  {%  endif %}

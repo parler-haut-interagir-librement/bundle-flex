@@ -1,0 +1,35 @@
+{
+    "name": "phil/bundle-flex",
+    "description": "Composer plugin for Proclaim Honestly, Interact Liberally - Internet Platform (Symfony) Bundle Skeleton",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Philippe Gamache",
+            "email": "philippe@ph-il.ca"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "composer-plugin-api": "^2.3",
+        "nikic/php-parser": "^4.18",
+        "twig/twig": "^3.8"
+    },
+    "require-dev": {
+        "composer/composer": "^2.6",
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phil\\BundleFlex\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Phil\\BundleFlex\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "class": "Phil\\BundleFlex\\Flex"
+    }
+}

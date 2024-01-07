@@ -1,0 +1,33 @@
+<?php
+
+namespace {{ options.bundleNamespace }}\Command;
+
+use Symfony\Component\Console\Attribute\AsCommand;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Command\LockableTrait;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Style\SymfonyStyle;
+
+#[AsCommand(name: '{{ options.vendorPrefix }}:{{ options.getNoBundleName }}:hello', description: 'Hello World')]
+class HelloCommand extends Command
+{
+    use LockableTrait;
+
+   protected function execute(InputInterface $input, OutputInterface $output): int
+    {
+        $symfonyStyle = new SymfonyStyle($input, $output);
+
+        if (!$this->lock()) {
+            $symfonyStyle->error('Command already running');
+
+            return Command::FAILURE;
+        }
+
+        // Write your command here
+
+        $symfonyStyle->success('Hello World!');
+
+        return Command::SUCCESS;
+    }
+}
