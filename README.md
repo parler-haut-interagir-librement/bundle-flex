@@ -1,23 +1,28 @@
-# Bundle Flex
+# PHIL bundle flex
 
-Composer plugin for [Proclaim Honestly, Interact Liberally - Internet Platform (Symfony) Bundle Skeleton](https://github.com/parler-haut-interagir-librement/bundle-skeleton).
+This Composer plugin is no longer maintained. It filled in the old PHIL bundle skeleton, which is no longer maintained
+either. New PHIL packages, libraries and bundles alike, are created with the `new` command of
+[phil/dev-tools](https://github.com/parler-haut-interagir-librement/dev-tools):
 
-Base on [yceruto/bundle-flex](https://github.com/yceruto/bundle-flex) with adjustment to fit phil-ip requirements.
+```bash
+composer require --dev phil/dev-tools
+vendor/bin/phil-dev new vendor/name --bundle
+```
 
-## Features
+`phil-dev new` writes the file set every PHIL package has: sources, tests, bilingual documentation, CHANGELOG and the
+configuration of the quality tools. See
+[The package skeleton](https://github.com/parler-haut-interagir-librement/dev-tools/blob/main/doc/skeleton.md).
 
-- Update `composer.json` file with PSR-4 namespaces.
-- Generate `README.md` file with basic installation instructions.
-- Generate directory structure and boilerplate files.
-- Generate bundle class with basic implementation.
-- Add tests
-- Add Static analysis with PHPStan
-- Add Coding standards with php-cs-fixer
-- Add Refactoring with Rector
-- Add task runner with Castor
+To start an application instead, use one of the PHIL templates:
+[MicroSymfony](https://github.com/parler-haut-interagir-librement/MicroSymfony),
+[WebSymfony](https://github.com/parler-haut-interagir-librement/WebSymfony),
+[WebSkeleton](https://github.com/parler-haut-interagir-librement/WebSkeleton) or
+[ApiSymfony](https://github.com/parler-haut-interagir-librement/ApiSymfony).
 
-<img src="doc/demo.gif" alt="demo" width="400"/>
+This repository will be archived.
+
+[Version française](README.fr.md)
 
 ## License
 
-This software is published under the [MIT License](LICENSE)
+MIT

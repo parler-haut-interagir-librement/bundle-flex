@@ -1,6 +1,6 @@
 {
     "name": "phil/bundle-flex",
-    "description": "Composer plugin for Proclaim Honestly, Interact Liberally - Internet Platform (Symfony) Bundle Skeleton",
+    "description": "No longer maintained: PHIL packages are created with phil-dev new from phil/dev-tools.",
     "type": "composer-plugin",
     "license": "MIT",
     "authors": [
@@ -31,5 +31,6 @@
     },
     "extra": {
         "class": "Phil\\BundleFlex\\Flex"
-    }
+    },
+    "abandoned": "phil/dev-tools"
 }
